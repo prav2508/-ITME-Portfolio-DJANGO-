@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>#ITME</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
+  </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="{% static 'images/#ITME logo.png' %}" alt="#ITME logo" style="width:35%;margin-top:18px">
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+      <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="/accounts/userprofile/">Profile</a></li>
+        <li><a href="/posts/main_wall/">Wall</a></li>
+        <li><a href="/accounts/signout/">Signout</a></li>
+      </ul
+    </div>
+</nav>
+<div class="container" style="width: 1365px;">
+{% block content %}
+{% endblock content%}
+</div>
+
+</body>
+<footer style="margin-top:150px;height:215px;margin-bottom:0px;">
+<strong>#ITME</strong>
+<p><b>Online portfolio for all the freelancers, workers,creators,etcs</b></p>
+</footer>
+</html>

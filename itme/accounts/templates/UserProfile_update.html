@@ -1,0 +1,16 @@
+{% extends 'base1.html'%}
+{% load crispy_forms_tags%}
+
+{% block content%}
+<div class="col-sm-6 col-sm-offset-5" style="margin-top:70px;">
+<h1>Profile</h1>
+<br>
+<small>View and edit your details</small>
+<form class="" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+{{forms|crispy}}
+<br>
+  <input type="Submit" name="" value="Update">
+</form>
+<br>
+</div>
+{% endblock content%}

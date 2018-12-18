@@ -1,0 +1,15 @@
+{% extends 'base1.html'%}
+{% load crispy_forms_tags%}
+
+{% block content%}
+<div class="col-sm-6 col-sm-offset-5" >
+<h1>Create new posts</h1>
+<form class="" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+{{forms|crispy}}
+<br>
+  <input type="Submit" name="" value="addposts">
+</form>
+<br>
+
+</div>
+{% endblock content%}

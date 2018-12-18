@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags%}
+
+{% block content%}
+
+<div class="col-sm-3 col-sm-offset-4" style="top: 25px;left: 100px">
+  <div class="thumbnail" style="height:250px;width:250px;">
+    {% if user_ob.profile_image %}
+    <img src="{{user_ob.profile_image.url}}" alt="profile picture">
+    {%endif%}
+  </div>
+
+</div>
+<div class="col-sm-3 col-sm-offset-4 text-center" style="left:73px">
+  <h1 class="display-4">{{user.username|capfirst}}</h1>
+  {%if user_ob.profession%}
+  <h1 class="display-4">{{user_ob.profession|capfirst}}</h1>
+  {%endif%}
+  {%if user_ob.place%}
+  <h1 class="display-4">{{user_ob.place|capfirst}}</h1>
+  {%endif%}
+</div>
+
+<div class="col-sm-8 col-sm-offset-2" style="margin-top:70px;">
+  {% for obj in objt %}
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="thumbnail">
+        <!-- <img src="..." alt="..."> -->
+        <div class="caption">
+          <h2>{{ obj.title }} <small> {{ obj.timestamp|timesince }} ago</small></h2>
+          {% if obj.post_image %}
+          <div class="" align="middle">
+             <img src='{{ obj.post_image.url }}' class='img-responsive'/>
+          </div>
+
+          {% endif %}
+            <p>{{ obj.description|linebreaks|truncatechars:120 }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+{% endblock content%}

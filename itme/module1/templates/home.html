@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>#ITME</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="{% static 'images/#ITME logo.png' %}" alt="#ITME logo" style="width:35%;margin-top:18px">
+    </div>
+
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="/accounts/signup/">Sign Up</a></li>
+      <li><a href="/accounts/signin/">Sign In</a></li>
+      <li><a href="#">Report</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static 'images/c1.jpg' %}" alt="photography" style="width:100%;filter: blur(1.5px);">
+        <div class="carousel-caption bg-text" style="font-size:30px">
+            <h3 id="caption_h3">Photography</h3>
+        <p>Showcase others what they havn't seen.</p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/b1.jpg' %}" alt="painting" style="width:100%;filter: blur(1.5px);">
+        <div class="carousel-caption bg-text" style="font-size:30px">
+            <h3 id="caption_h3">Painting</h3>
+        <p>Bring your imagination to light.</p>
+      </div>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'images/p1.jpg' %}" alt="music" style="width:100%;filter: blur(1.5px);">
+        <div class="carousel-caption bg-text" style="font-size:30px">
+            <h3 id="caption_h3">Music</h3>
+        <p>Spread the world what u feel.</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<div class="container-fluid">
+      <div class="aboutus_bg col-sm-12">
+              <div class="aboutus_content">
+      <h3 id="home_sub"align="center">About Us</h3>
+    </br></br></br></br></br></br>
+  <p id="aboutus_para"align=center>
+    Career portfolios are used to plan, organize and document education, work samples and skills. People use career portfolios to apply for jobs, apply to college or training programs, get a higher salary, show transferable skills, and to track personal development. They are more in-depth than a resume, which is used to summarize the above in one or two pages. Career portfolios serve as proof of one's skills, abilities, and potential in the future. Career portfolios are becoming common in high schools, college, and workforce development.[citation needed] Many school programs will have students create, update, and use a career portfolio before moving on to the next level in life.
+Career portfolios help with a job or acceptance into higher education institutes. A career portfolio should be personal and contain critical information. Items that should be included include (but are not limited to) personal information, evaluations, sample work, and awards and acknowledgments. Career portfolios are often kept in a simple three-ring binder or online as an electronic portfolio and updated often. A career portfolio is used as a marketing tool in selling oneself for personal advancement. In some industries, employers or admission offices commonly request a career portfolio, so it is a wise idea to have an updated one on hand.
+</p>
+              </div>
+      </div>
+
+</div>
+
+
+</body>
+<footer style="margin-top:0px;
+height:130px;">
+  <strong>#ITME</strong>
+  <p><b>Online portfolio for all the freelancers, workers,creators,etc</b></p>
+  </footer>
+</footer>
+</html>
